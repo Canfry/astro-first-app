@@ -1,4 +1,6 @@
 ---
+import Button from "../components/Button.astro";
+import Footer from '../components/Footer.jsx'
 ---
 
 <html lang="en">
@@ -6,9 +8,13 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Astro Test</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<h1 class='text-red-700 text-4xl'>Astro</h1>
+		<Button greeting='Welcome' firstname='Devs'/>
+		<!-- To use JSX component either choose JSX component or SLOT -->
+		<!-- <p slot="footer">This is the footer</p> -->
+		<Footer client:load/>
 	</body>
 </html>

@@ -1,0 +1,43 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Astro Blog</title>
+  </head>
+  <body class="bg-slate-800 text-white">
+    <header class="w-100vw mb-8">
+      <div
+        class="max-w-[70%] m-auto flex align-center justify-between py-[3rem] px-[4rem]"
+      >
+        <div>
+          <h1 class="text-orange-500 text-4xl"><a href="/">Astro Blog</a></h1>
+        </div>
+        <div class="text-center">
+          <ul
+            class="style-none flex align-center justify-between m-auto max-w-full items-center h-[100%]"
+          >
+            <li class="decoration-none ml-8">
+              <a href="/blogs/">Blogs</a>
+            </li>
+            <li class="decoration-none ml-8">
+              <a href="/about/">About</a>
+            </li>
+            <button
+              class="cursor-pointer text-center py-2 px-4 ml-8 bg-slate-600 rounded-xl hover:bg-slate-700 hover:text-orange-500 border-none"
+            >
+              <a href="/sign-in/"> Sign In</a>
+            </button>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>

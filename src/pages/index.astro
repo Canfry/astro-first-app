@@ -1,6 +1,5 @@
 ---
-import Button from "../components/Button.astro";
-import Footer from '../components/Footer.jsx'
+import Header from "../layouts/Header.astro";
 ---
 
 <html lang="en">
@@ -11,11 +10,6 @@ import Footer from '../components/Footer.jsx'
 		<title>Astro Test</title>
 	</head>
 	<body>
-		<h1 class='text-red-700 text-4xl'>Astro</h1>
-		<Button greeting='Welcome' firstname='Devs'/>
-		<!-- To use JSX component either choose JSX component or SLOT -->
-		<!-- <p slot="footer">This is the footer</p> -->
-		<a href="/about">About Page</a>
-		<Footer client:load/>
+		<Header>This is my main content</Header>
 	</body>
 </html>

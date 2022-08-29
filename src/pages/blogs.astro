@@ -1,0 +1,36 @@
+---
+import Header from "../layouts/Header.astro";
+
+const res = await fetch("https://jsonplaceholder.typicode.com/posts?_limit=10");
+const data = await res.json();
+console.log(data);
+const posts = data ;
+
+export type Posts = {
+  userId?: number,
+  id?: number,
+  title?: string,
+  body?: string
+}
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogs Page</title>
+  </head>
+  <body>
+    <Header>
+      <main>
+        <h1>Blogs Page</h1>
+        {posts.map((post: Posts) => (
+          <h1 class='text-2xl'>{post.title}</h1>
+          <h2 class="text-1xl">{post.body}</h2>
+        ))}
+      </main>
+    </Header>
+  </body>
+</html>

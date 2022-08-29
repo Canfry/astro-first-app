@@ -1,5 +1,8 @@
 ---
 import Header from "../layouts/Header.astro";
+import Blogs, { Posts } from "./blogs.astro";
+
+const { posts }: { posts?: Posts } = Astro.props;
 ---
 
 <html lang="en">
@@ -10,6 +13,12 @@ import Header from "../layouts/Header.astro";
 		<title>Astro Test</title>
 	</head>
 	<body>
-		<Header>This is my main content</Header>
+		<Header>
+			This is my main content
+			<div>
+				<Blogs posts={posts} />
+				{posts.map((post: Posts) => <h1>{post.title}</h1>)}
+			</div>
+		</Header>
 	</body>
 </html>

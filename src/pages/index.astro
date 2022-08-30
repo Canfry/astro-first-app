@@ -1,8 +1,6 @@
 ---
 import Header from "../layouts/Header.astro";
 import Blogs, { Posts } from "./blogs.astro";
-
-const { posts }: { posts?: Posts } = Astro.props;
 ---
 
 <html lang="en">
@@ -10,15 +8,9 @@ const { posts }: { posts?: Posts } = Astro.props;
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Test</title>
+		<title>Astro Blog</title>
 	</head>
 	<body>
-		<Header>
-			This is my main content
-			<div>
-				<Blogs posts={posts} />
-				{posts.map((post: Posts) => <h1>{post.title}</h1>)}
-			</div>
-		</Header>
+		<Header>This is my main content</Header>
 	</body>
 </html>

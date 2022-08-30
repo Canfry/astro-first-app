@@ -3,7 +3,7 @@ import Header from "../layouts/Header.astro";
 
 const res = await fetch("https://jsonplaceholder.typicode.com/posts?_limit=10");
 const data = await res.json();
-console.log(data);
+// console.log(data);
 const posts = data ;
 
 export type Posts = {
